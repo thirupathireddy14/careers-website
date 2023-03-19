@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- 1:50 -->
 <html>
 
 <head>
@@ -47,14 +46,21 @@
 
 <body>
     {% include 'nav.html' %}
-    <img id="banner" class="img-fluid" src="/static/banner.jpg">
+    <img id="banner" class="img-fluid" src="/static/banner.png">
     <div class="container">
         <h1 class="text-center mt-4 mb-4">{{company_name}} Careers</h1>
+        <div class="row" style="margin-bottom: 16px;"> 
+            <div class="col-md-6">
         <p class="lead">The career website also has a section for students and recent graduates, which provides
             information about internships, entry-level job opportunities, and programs for new graduates. This section
             of the website includes resources for students, such as information on how to prepare for a career in
             technology, as well as opportunities to connect with current employees and learn about the company culture.
         </p>
+    </div>
+    <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.png" style="height: 320px; border-radius: 4px;">
+    </div>
+    </div>
         <h2 class="text-center mt-2 mb-2">Job Openings</h2>
         <p>
         <div>
