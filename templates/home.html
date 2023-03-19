@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 1:50 -->
 <html>
 
 <head>
@@ -19,6 +20,7 @@
             width: 100%;
             height: 260px;
             object-fit: cover;
+            margin-bottom: 16px;
         }
 
         /* h2{
@@ -44,10 +46,10 @@
 </head>
 
 <body>
+    {% include 'nav.html' %}
+    <img id="banner" class="img-fluid" src="/static/banner.jpg">
     <div class="container">
         <h1 class="text-center mt-4 mb-4">{{company_name}} Careers</h1>
-        <img id="banner" class="img-fluid" src="/static/banner.jpg">
-        <h2 class="text-center mt-2 mb-2">About My Careers</h2>
         <p class="lead">The career website also has a section for students and recent graduates, which provides
             information about internships, entry-level job opportunities, and programs for new graduates. This section
             of the website includes resources for students, such as information on how to prepare for a career in
@@ -66,6 +68,7 @@
             <p class="mt-4">Copy Rights 2023</p>
         </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 
 </html>
