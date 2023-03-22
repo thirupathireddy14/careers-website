@@ -3,69 +3,35 @@
 
 <head>
     <title>My Careers</title>
-    <style>
-        /* h1 {
-                font-size: 40px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-weight: normal;
-                color: rgb(50,50,50);
-                text-align: center;
-            }
-            p {
-                font-family: 'Times New Roman', Times, serif ;
-                color: rgb(80,80,80);
-            } */
-        #banner {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            margin-bottom: 16px;
-        }
+    {% include 'bootstrap.html' %}
 
-        /* h2{
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: 32px;
-                color: rgb(100, 100, 100);
-                text-align: center;
-                font-weight: normal;
-            } */
-        /* #container{
-                max-width:720px;
-                margin: 0 auto 0 auto;
-            } */
-        /* .bodytext{
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                color:rgb(80,80,80);
-            } */
-    </style>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
     {% include 'nav.html' %}
-    <img id="banner" class="img-fluid" src="/static/banner.png">
+    {% include 'banner.html'%}
     <div class="container">
-        <h1 class="text-center mt-4 mb-4">{{company_name}} Careers</h1>
-        <div class="row" style="margin-bottom: 16px;"> 
+        <h1 class="text-center mt-4 mb-4">Kshanika Careers</h1>
+        <div class="row" style="margin-bottom: 16px;">
             <div class="col-md-6">
-        <p class="lead">The career website also has a section for students and recent graduates, which provides
-            information about internships, entry-level job opportunities, and programs for new graduates. This section
-            of the website includes resources for students, such as information on how to prepare for a career in
-            technology, as well as opportunities to connect with current employees and learn about the company culture.
-        </p>
-    </div>
-    <div class="d-none d-md-block col-md-6">
-        <img src="/static/people.png" style="height: 320px; border-radius: 4px;">
-    </div>
-    </div>
+                <p class="lead">The career website also has a section for students and recent graduates, which provides
+                    information about internships, entry-level job opportunities, and programs for new graduates. This
+                    section
+                    of the website includes resources for students, such as information on how to prepare for a career
+                    in
+                    technology, as well as opportunities to connect with current employees and learn about the company
+                    culture.
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="/static/people.png" style="height: 320px; border-radius: 4px;">
+            </div>
+        </div>
         <h2 class="text-center mt-2 mb-2">Job Openings</h2>
         <p>
         <div>
             {% for job in jobs %}
-                {% include 'jobitem.html' %}
+            {% include 'jobitem.html' %}
             {% endfor %}
         </div>
         </p>
